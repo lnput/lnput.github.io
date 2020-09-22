@@ -1,1 +1,1 @@
-console.log("哈哈")
+x = 1

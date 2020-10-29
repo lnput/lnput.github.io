@@ -10,8 +10,9 @@
             width: 200;
             height: 360;
         }
+
         div {
-            background-color:rgb(244, 246, 247);
+            background-color: rgb(244, 246, 247);
         }
     </style>
 </head>
@@ -26,20 +27,37 @@
         <hr>
     </div>
     <div>
-        
+        <form>
+            请输入账号<input id="username" type="text" value="云计算" onfocus="checkUser()">
+            请输入密码<input id="password" type="text" value="123456" onfocus="checkWord()"><br>
+        </form>
     </div>
 </body>
 
 </html>
 
 <script>
-    function change() { 
+    function change() {
         // 获取id为“myImage”的img标签元素
         image = document.getElementById("myImage");
         // 检测src中是否包含“off”字符串，有，src则换成on，无则off
-        image.src = image.src.match("off") ? "IMAGES/on.gif" : "IMAGES/off.gif"; 
+        image.src = image.src.match("off") ? "IMAGES/on.gif" : "IMAGES/off.gif";
 
         button = document.getElementById("myButton");
         button.innerHTML = button.innerHTML.match("开灯") ? "关灯" : "开灯";
+
+        button.style.color = "#ff0000";
+    }
+
+    function checkUser() {
+        change();
+        username = document.getElementById("username");
+        console.log(username.value);
+    }
+
+    function checkWord() {
+        change();
+        password = document.getElementById("password");
+        console.log(password.value);
     }
 </script>

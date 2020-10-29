@@ -4,41 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>云计算18级Web前端开发</title>
+    <title>JS案例</title>
+    <style>
+        img {
+            width: 200;
+            height: 360;
+        }
+        div {
+            background-color:rgb(244, 246, 247);
+        }
+    </style>
 </head>
 
 <body>
-    <div id="frame" style="background-color: aqua; width: 320; height: 480; ">
-        <div id="head"
-            style="background-color: blueviolet; width: 640; height: 50; border-radius: 1px;text-align: center;">
-            <h2>开发人员介绍</h2>
-        </div>
-
-        <div id="banner" style="background-color: goldenrod;">
-            <a href="/Video/CG动画.mp4" target="myframe"> hahahahahha |</a>
-            <a href="/Audio/ChildhoodMemory.mp3" target="myframe">| 背景音乐都变了 |</a>
-            <a href="/HTML/team.html" target="myframe">| 团队介绍 |</a>
-            <a href="/HTML/member1.html" target="myframe">| 项目经理 |</a>
-            <a href="/HTML/member2.html" target="myframe">| 美工人员 |</a>
-            <a href="/HTML/member3.html" target="myframe">| 设计人员 |</a>
-            <a href="#" target="myframe">| ... |</a>
-        </div>
-        <div id="left" style="background-color: rgb(2, 46, 9); float: left;">
-            <iframe name="myframe" src="/Video/CG动画.mp4" width="618" height="350"
-                style="border-color: goldenrod;"></iframe>
-        </div>
-        <div id="right" style="background-color: aqua; text-align: center;">
-            <img src="/IMG/logo.jpg">
-            <p>Think Twice</p>
-            <p>Code Once</p>
-            <p>Just do it</p>
-            <p>Any more</p>
-        </div>
-        <div id="foot"
-            style="background-color: blueviolet; width: 640; height: 10; border-radius: 1px;text-align: center; clear: both;">
-            <h2>CopyRight</h2>
-        </div>
+    <div>
+        <hr>
+        <img id="myImage" onclick="change()" src="IMAGES/off.gif">
+        <button id="myButton" type="button" onclick="change()">点我!</button>
+        <p>1.点击灯泡打开或关闭这盏灯</p>
+        <p>2.点击按钮打开或关闭这盏灯</p>
+        <hr>
+    </div>
+    <div>
+        
     </div>
 </body>
 
 </html>
+
+<script>
+    function change() { 
+        // 获取id为“myImage”的img标签元素
+        image = document.getElementById("myImage");
+        // 检测src中是否包含“off”字符串，有，src则换成on，无则off
+        image.src = image.src.match("off") ? "IMAGES/on.gif" : "IMAGES/off.gif"; 
+
+        button = document.getElementById("myButton");
+        button.innerHTML = button.innerHTML.match("开灯") ? "关灯" : "开灯";
+    }
+</script>

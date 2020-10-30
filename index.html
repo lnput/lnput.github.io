@@ -22,16 +22,21 @@
         <hr>
         <img id="myImage" onclick="change()" src="IMAGES/off.gif">
         <button id="myButton" type="button" onclick="change()">点我!</button>
-        <p>1.点击灯泡打开或关闭这盏灯</p>
-        <p>2.点击按钮打开或关闭这盏灯</p>
         <hr>
     </div>
     <div>
+        <h3>开关灯的三种方法</h3>
+        <p>1.点击灯泡打开或关闭这盏灯</p>
+        <p>2.点击按钮打开或关闭这盏灯</p>
+        <p>3.输入框聚焦是可打开或关闭这盏灯</p>
+    </div>
+    <div>
         <form>
-            请输入账号<input id="username" type="text" value="云计算" onfocus="checkUser()">
-            请输入密码<input id="password" type="text" value="123456" onfocus="checkWord()"><br>
+            请输入账号<input id="username" type="text" value="云计算" onfocus="checkUser()" onblur="checkWord()">
+            请输入密码<input id="password" type="text" value="123456" onfocus="checkWord()" onblur="checkWord()"><br>
         </form>
     </div>
+    
 </body>
 
 </html>
